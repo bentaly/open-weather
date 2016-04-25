@@ -1,6 +1,5 @@
 /node_modules
 /dist
 /.tmp-bh
-/.gradle
 /.sass-cache
 /bower_components
