@@ -1,0 +1,110 @@
+div[ng-controller=HomeCtrl] {
+	.home-splash {
+		display: flex;
+		flex-direction: column;
+		height: 480px;
+		padding: $padding-very-large;
+		justify-content: space-between;
+		background-image: url("/images/homesplash.jpg");
+		background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    align-items: flex-start;
+
+		div {
+			font-size: 30px;
+			width: 50%;
+			font-weight: bold;
+			opacity: 0;
+			transition: opacity 0.5s linear;
+
+			&.visible {
+				opacity: 1;
+			}
+
+			@media(min-width: $screen-med) {
+				font-size: $font-size-big;
+			}
+			
+			@media(min-width: $screen-large) {
+				font-size: $font-size-very-large;
+			}
+		}
+
+		button {
+			align-self: flex-start;
+		}
+
+
+	}
+
+	#twitter-widget-0 {
+		background-color: $white;
+	}
+
+	.three-col {
+		display: flex;
+		padding: $padding-large;
+
+		@media(max-width: $screen-med) {
+			display: block;
+		}
+		
+		article {
+
+			@media(max-width: $screen-med) {
+				img {
+					width: 100%;
+
+					&#troops-walking {
+						margin: $padding 0;
+					}
+				}
+			}
+
+			@media(min-width: $screen-med) {
+				width: calc(100% / 3);
+
+				&:not(:last-of-type) {
+					margin-right: $padding;
+				}
+
+				&:first-of-type {
+				    display: flex;
+	    			flex-direction: column;
+
+					img {
+						width: 100%;
+
+						&:last-of-type {
+							margin-top: auto;
+						}
+					}
+				}
+			}
+
+			> img:first-of-type {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			
+			h2 {
+				margin-top: 0;
+				margin-bottom: $padding;
+			}
+
+			.green-block-small {
+				font-family: $font-gothic;
+				font-size: $font-size;
+				background-color: $green;
+				margin-bottom: $padding;
+				padding: $padding;
+
+				img {
+					width: 30%;
+				}
+			}
+		}
+	}
+}
+

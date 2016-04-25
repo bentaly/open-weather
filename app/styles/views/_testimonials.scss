@@ -1,0 +1,64 @@
+div[ng-controller=TestimonialsCtrl] {
+	.two-cols {
+		
+		padding: $padding-large;
+
+		@media(min-width: $screen-med) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		
+
+		& > div {
+			width: calc(50% - #{$padding});
+			
+			@media(max-width: $screen-med) {
+				width: initial;
+
+				&:first-of-type {
+					margin-bottom: $padding-large;
+				}
+			}
+			
+			&:first-of-type {
+				.testimonal-img {
+					background-image: url('/images/mark.jpg');
+				}
+			}
+
+			&:last-of-type {
+				.testimonal-img {
+					background-image: url('/images/thomas-1.jpg');
+				}
+			}
+
+			.testimonal-img {
+				height: 420px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+
+			h1 {
+				color: $green;
+				border-bottom: 1px solid $green;
+				padding-bottom: $padding-small;
+				margin-bottom: $padding-small;
+				margin-top: $padding;
+			}
+
+			p:first-of-type {
+				margin-top: $padding-small;
+			}
+		}
+	}	
+
+	p.green-big {
+		font-family: $font-gothic;
+		color: $green;
+		font-size: $font-size-big;
+		text-align: center;
+		@extend .bold;
+	}
+}

@@ -1,0 +1,36 @@
+<div class="header-top">
+	<div class="social-icons">
+		<a href="https://www.linkedin.com/company/building-heroes" target="_blank">
+			<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+		</a>
+		<a href="https://www.facebook.com/BuildingHeroes" target="_blank">
+			<i class="fa fa-facebook-square" aria-hidden="true"></i>
+		</a>
+		<a href="https://twitter.com/buildingheroes" target="_blank">
+			<i class="fa fa-twitter" aria-hidden="true"></i>
+		</a>
+		<a href="https://www.instagram.com/buildingheroes" target="_blank">
+			<i class="fa fa-instagram" aria-hidden="true"></i>
+		</a>
+	</div>
+	<div class="donate-contact">
+		<a href="https://www.pledgit.net/campaign/wXTzL/heroes-on-and-off-the-pitch" target="_blank">DONATE </a>|<a href="mailto:info@buildingheroes.org.uk?Subject=Enquiry" target="_top"> CONTACT</a>
+	</div>
+</div>
+
+<div class="header-title" ng-click="state = 'HOME'">
+	<a ui-sref="HOME" href="#"><img src="/images/buildingheroeslogo.png" /></a>
+</div>
+
+<div class="header-mobile-link-toggle" ng-click="menuToggle()">
+	<img ng-if="!overlayVisible" src="/images/menu-plus.png"></i>
+	<img ng-if="overlayVisible" src="/images/menu-cross.png"></i>
+</div>
+
+<div class="header-links">
+	<a ng-class="{active: state === 'COURSE'}" ui-sref="COURSE" ng-click="state = 'COURSE'" href="#">COURSE</a>
+	<a ng-class="{active: state === 'TESTIMONIALS'}" ui-sref="TESTIMONIALS" ng-click="state = 'TESTIMONIALS'" href="#">TESTIMONIALS</a>
+	<a ng-class="{active: state === 'PATRONS'}" ui-sref="PATRONS" ng-click="state = 'PATRONS'" href="#">PATRONS</a>
+	<a ng-class="{active: state === 'TEAM'}" ui-sref="TEAM" ng-click="state = 'TEAM'" href="#">TEAM</a>
+	<a ng-class="{active: state === 'EVENTS'}" ui-sref="EVENTS" ng-click="state = 'EVENTS'" href="#">EVENTS</a>
+</div>

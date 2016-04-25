@@ -1,0 +1,13 @@
+// global overrides
+@import "variables";
+
+// application scss
+@import "body";
+@import "views/home";
+@import "views/course";
+@import "views/testimonials";
+@import "views/patrons";
+@import "views/team";
+@import "views/event";
+
+@import "fa";
