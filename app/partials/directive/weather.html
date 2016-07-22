@@ -1,0 +1,8 @@
+<div class="weather-container">
+	
+	<span>{{date | date:'MMM d ha'}}</span>
+	<div>
+		{{weatherInstance.description | capitalise}}
+		<img ng-src="http://openweathermap.org/img/w/{{weatherInstance.icon}}.png">
+	</div>
+</div>

@@ -1,42 +1,28 @@
 <div id="home-ctrl" ng-controller="HomeCtrl">
-	<div class="home-splash">
-		<div ng-class="{visible: fadeIn}">
-			{{activeText}}
+
+	<div id="video-holder">
+		<video id="main-splash-video" poster="images/videoplaceholder.png" muted="true" loop autoplay>
+			<source src="videos/timelapseclouds-min.mp4" type="video/mp4" poster="images/videoplaceholder.png">
+			Your browser does not support the video tag.
+		</video>
+
+		<div id="main-content">
+			<label for="place-input">
+				Use your location or find the weather in a place below:
+			</label>
+
+			<input id="place-input" type="text" g-places-autocomplete ng-model="placeVar" />
+
+			<div id="weather-text" ng-if="weather.current && weather.current != ''">
+				<span ng-if="fromGeo">Where you are is experiencing {{weather.current}}</span>
+				<span ng-if="!fromGeo">{{weather.current | capitalise}}</span>
+				<img ng-src="http://openweathermap.org/img/w/{{weather.icon}}.png">
+			</div>
+
+			<div id="forecast" ng-class='{show: weather.list.length !== 0}'>
+				<weather ng-repeat="weather in weather.list" weather="weather"></weather>
+			</div>
 		</div>
-
-		<a class="button" href="https://www.pledgit.net/campaign/wXTzL/heroes-on-and-off-the-pitch" target="_blank">DONATE NOW</a>	
 	</div>
-
-	<green-section donate="true" img="greenContent.img" copy="greenContent.copy"></green-section>
-
-	<div class="three-col resize-cols main-content" scroll ng-class="{show: boolChangeClass}">
-		<article>
-			<img src="images/about.png">
-			Building Heroes provides skills training to Military Veterans and support into employment in the building trades. Our aim is to tackle unemployment amongst those who have kept us safe by offering them a seamless transition to a new career in construction.
-			<img id="troops-walking" src="images/troopswalking.jpg">
-		</article>
-		<article>
-			<img src="images/didyouknow.png">
-			<div class="green-block-small">
-				<img src="images/helmet.png">
-				<div>
-					APPROXIMATELY 120,000 UNEMPLOYED MILITARY VETERANS OF WORKING AGE IN BRITAIN TODAY
-				</div>
-			</div>
-			<div class="green-block-small">
-				<img src="images/hammer.png">
-				<div>
-					THE UK CONSTRUCTION INDUSTRY IS FACING A 230,000 PERSON SKILLS SHORTAGE – THE HIGHEST SINCE 1998
-				</div>
-			</div>
-		</article>
-		<article>
-			<img src="images/latesttweets.png">
-
-			<a class="twitter-timeline" href="https://twitter.com/buildingheroes" data-widget-id="722735960232996865" data-chrome="nofooter noborders noheader"></a>
-
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";js.setAttribute('onload', "twttr.events.bind('rendered',function(e) {angular.element(document.getElementById('home-ctrl')).scope().twitterLoaded();});");fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-		</article>
-	</div>
+	
 </div>

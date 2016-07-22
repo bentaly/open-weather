@@ -4,10 +4,12 @@
 // application scss
 @import "body";
 @import "views/home";
-@import "views/course";
-@import "views/testimonials";
-@import "views/patrons";
-@import "views/team";
-@import "views/event";
 
-@import "fa";
+@font-face {
+   font-family: 'univers';
+   src: url("../fonts/UniversCom-57Condensed.ttf");
+}
+@font-face {
+   font-family: 'univers-bold';
+   src: url("../fonts/UniversCom-67BoldCond.ttf");
+}
