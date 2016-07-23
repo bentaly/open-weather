@@ -5,6 +5,13 @@
 
 ## How to run
 
+To get this if you're looking at it on GitHub:
+
+```bash
+git clone https://github.com/bentaly/open-weather
+cd open-weather
+```
+
 Go to the root of the project and run:
 
 ```bash
@@ -23,12 +30,7 @@ then simply:
 gulp
 ```
 
-To get this if you're looking at it on GitHub:
-
-```bash
-git clone https://github.com/bentaly/open-weather
-cd open-weather
-```
+Note running this locally does not enable geolocation - see below
 
 
 ### Notes from the Author
@@ -39,5 +41,17 @@ For example the background video could change depending on weather, but it would
 
 If I had more time I'd work a lot on the UI. It is difficult to see the day forcast, so splitting the days up and using a clock for time and showing the way the weather changes on each day would've been nice.
 
+I'd add some UI to let the user know the browser is getting thier location. As it is the user simply waits for a second or two after accepting.
 
+I'd like to have added some tests, end to end with something like protractor and some unit tests.
+
+I'd also bundle the node and gulp project together, for time sakes I used a sample node server - just to push this to heroku.
+
+As Heroku serves on HTTPS, the fact that open weather api was served over http caused an issue. In later versions of Chrome (amongst others) you cannot serve http content over http.
+
+So I decided to open an API endpoint on the node server. I've not used lots of node before so forgive if the implementation is a little crude.
+
+I also had to allow the origin 0.0.0.0:3000 since my gulp server spins up at that address, and I wanted to be able to access the endpoint on the heroku server.
+
+Serving everything over https meant I could utilise Geoloaction, which is also nice.
 
