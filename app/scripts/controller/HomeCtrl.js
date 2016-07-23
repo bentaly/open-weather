@@ -16,6 +16,12 @@
                     WeatherService.getWeatherByCoords({lat: lat, lon: lon}).then(function(data) {
                         if (!angular.isUndefined(data) && !angular.isUndefined(data.list) && data.list.length > 0) {
                             var weather = data.list[0].weather;
+                            
+                            $scope.fromGeo = fromGeo;
+                            if (fromGeo) {
+                                $scope.location = data.city.name;
+                            }
+                            
                             if (!angular.isUndefined(weather) && weather.length > 0) {
                                 $scope.weather.current = weather[0].description;
                                 $scope.weather.icon = weather[0].icon;
@@ -24,8 +30,6 @@
                                 data.list.shift();
                                 $scope.weather.list = data.list;
                             }
-    
-                            $scope.fromGeo = fromGeo;                            
                         }
                     });
                 };

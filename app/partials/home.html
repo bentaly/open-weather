@@ -14,7 +14,7 @@
 			<input id="place-input" type="text" g-places-autocomplete ng-model="placeVar" />
 
 			<div id="weather-text" ng-if="weather.current && weather.current != ''">
-				<span ng-if="fromGeo">Where you are is experiencing {{weather.current}}</span>
+				<span ng-if="fromGeo">Where you are (in {{location}}) is experiencing {{weather.current}}</span>
 				<span ng-if="!fromGeo">{{weather.current | capitalise}}</span>
 				<img ng-src="http://openweathermap.org/img/w/{{weather.icon}}.png">
 			</div>
