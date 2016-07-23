@@ -36,7 +36,8 @@ then simply:
 gulp
 ```
 
-Note running this locally does not enable geolocation - see below
+A tab should open with the app - please refresh if the styling is off - see below.
+Note running this locally does not enable geolocation - see below.
 
 
 ### Notes from the Author
@@ -52,6 +53,8 @@ I'd add some UI to let the user know the browser is getting thier location. As i
 I'd like to have added some tests, end to end with something like protractor and some unit tests.
 
 I'd also bundle the node and gulp project together, for time sakes I used a sample node server - just to push this to heroku.
+
+Sometimes on first build due to the asynchronous task running nature of my build system, some styling is off, which i could fix given more time by ensuring the tasks ran sychronously.
 
 As Heroku serves on HTTPS, the fact that open weather api was served over http caused an issue. In later versions of Chrome (amongst others) you cannot serve http content over http.
 
