@@ -3,6 +3,10 @@
 > Welcome to the Open Weather 5 day forcast.
 
 
+## Hosted version of the app:
+
+> https://open-weather-buildit.herokuapp.com
+
 ## How to run
 
 To get this if you're looking at it on GitHub:
