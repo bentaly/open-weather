@@ -57,6 +57,8 @@ As Heroku serves on HTTPS, the fact that open weather api was served over http c
 
 So I decided to open an API endpoint on the node server. I've not used lots of node before so forgive if the implementation is a little crude.
 
+I added the index-for-node.js which starts the node server to this project - jsut for you to see the implementation. 
+
 I also had to allow the origin 0.0.0.0:3000 since my gulp server spins up at that address, and I wanted to be able to access the endpoint on the heroku server.
 
 Serving everything over https meant I could utilise Geoloaction, which is also nice.
