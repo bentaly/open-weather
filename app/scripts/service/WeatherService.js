@@ -5,8 +5,10 @@
     angular.module('ow.services')
         .factory('WeatherService', ['$resource', function($resource) {
 
+            var url = 'https://open-weather-buildit.herokuapp.com/openweather';
+
             //node server must be running for this
-            var getWeatherByCoords =  $resource('/openweather?lat=:lat&lon=:lon', {}, {});
+            var getWeatherByCoords =  $resource(url + '?lat=:lat&lon=:lon', {}, {});
             
             return {
 
