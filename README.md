@@ -7,6 +7,8 @@
 
 > https://open-weather-buildit.herokuapp.com
 
+Allow the browser to get your location, and wait a second...
+
 ## How to run
 
 To get this if you're looking at it on GitHub:
