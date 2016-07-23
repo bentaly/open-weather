@@ -55,3 +55,4 @@ I also had to allow the origin 0.0.0.0:3000 since my gulp server spins up at tha
 
 Serving everything over https meant I could utilise Geoloaction, which is also nice.
 
+The extra couple of steps at the end - especially venturing into Node, meant I spent a little over the 4 hrs on this - probably.
