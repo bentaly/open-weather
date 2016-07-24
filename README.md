@@ -39,6 +39,13 @@ gulp
 A tab should open with the app - please refresh if the styling is off - see below.
 Note running this locally does not enable geolocation - see below.
 
+## How to test
+
+Simply run:
+
+```bash
+gulp test
+```
 
 ### Notes from the Author
 
@@ -50,7 +57,7 @@ If I had more time I'd work a lot on the UI. It is difficult to see the day forc
 
 I'd add some UI to let the user know the browser is getting thier location. As it is the user simply waits for a second or two after accepting.
 
-I'd like to have added some tests, end to end with something like protractor and some unit tests.
+I'd like to have added some more tests, end to end with something like protractor, but also coverage of the controllers and other modules.
 
 I'd also bundle the node and gulp project together, for time sakes I used a sample node server - just to push this to heroku.
 

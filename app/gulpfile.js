@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')({ lazy: false });
+var Server = require('karma').Server;
 var $buildDir = './dist';
 var $subdir = $buildDir + '/';
 var $appDir = './app/';
@@ -33,6 +34,13 @@ gulp.task('webserver', function() {
       port: 3000,
       fallback: 'index.html'
     }));
+});
+
+gulp.task('test', function (done) {
+  new Server({
+    configFile: require('path').resolve('karma.conf.js'),
+    singleRun: true
+  }, done).start();
 });
 
 gulp.task('default', ['build', 'watch', 'webserver']);

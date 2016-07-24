@@ -2,16 +2,16 @@
   "name": "open-weather",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "~1.3.x",
+    "angular": "1.5.2",
     "angular-resource": "~1.3.x",
     "angular-route": "~1.3.x",
     "angular-ui-router": "0.2.x",
     "angular-google-places-autocomplete": "0.2.x"
   },
   "devDependencies": {
-    
+    "angular-mocks": "1.5.2"
   },
   "resolutions": {
-    "angular": "~1.3.x"
+    "angular": "1.5.2"
   }
 }
