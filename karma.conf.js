@@ -23,7 +23,7 @@ module.exports = function(config) {
         'test-main.js',
         'app/scripts/openWeather.js',
         'app/scripts/**/*.js',
-        'test/exampleSpec.js'
+        'test/weatherServiceSpec.js'
     ],
 
 
